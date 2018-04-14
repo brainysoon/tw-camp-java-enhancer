@@ -62,6 +62,6 @@ public class StudentInfo implements GradeReporter {
     @Override
     public Double reportTotal() {
         return this.gradeList.values().stream()
-                .reduce(0.0D, (acc, value) -> acc + value / gradeList.size());
+                .reduce(0.0D, (acc, value) -> acc + value);
     }
 }

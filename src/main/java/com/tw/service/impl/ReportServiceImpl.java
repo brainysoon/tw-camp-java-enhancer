@@ -50,6 +50,7 @@ public class ReportServiceImpl implements ReportService {
         try {
             return Arrays.stream(studentNoStr.split(Constants.REGEX_COMMA))
                     .filter(no -> studentList.containsKey(no.trim()))
+                    .map(String::trim)
                     .collect(Collectors.toList());
         } catch (Exception ex) {
             return null;

@@ -21,7 +21,7 @@ public class StudentInfoTest {
         grades.put("编程", 234D);
         studentInfo.setGradeList(grades);
 
-        Assert.assertEquals("Xi|234.23|12.4|321|234|200.4075", studentInfo.reportGrade());
+        Assert.assertEquals("Xi|234.23|12.4|321|234|801.63", studentInfo.reportGrade());
     }
 
     @Test
@@ -36,6 +36,6 @@ public class StudentInfoTest {
         grades.put("编程", 234D);
         studentInfo.setGradeList(grades);
 
-        Assert.assertEquals(200.4075, studentInfo.reportTotal(), 0.001);
+        Assert.assertEquals(801.63, studentInfo.reportTotal(), 0.001);
     }
 }
