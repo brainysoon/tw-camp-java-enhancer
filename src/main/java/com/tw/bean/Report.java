@@ -19,6 +19,10 @@ public class Report {
         return pickedStudent;
     }
 
+    public void setPickedStudent(List<GradeReporter> pickedStudent) {
+        this.pickedStudent = pickedStudent;
+    }
+
     public void pickStudent(GradeReporter gradeReporter) {
         this.pickedStudent.add(gradeReporter);
     }
