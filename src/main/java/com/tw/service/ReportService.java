@@ -1,10 +1,11 @@
 package com.tw.service;
 
+import com.tw.bean.Report;
 import com.tw.bean.StudentInfo;
 
 public interface ReportService {
 
-    String generateReport(String noList);
+    Report generateReport(String noList);
 
     StudentInfo addStudent(String studentInfo);
 }

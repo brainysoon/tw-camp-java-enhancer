@@ -1,9 +1,13 @@
 package com.tw.bean;
 
+import com.tw.Constants;
+import com.tw.GradeReporter;
+import com.tw.util.NumberUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class StudentInfo {
+public class StudentInfo implements GradeReporter {
 
     private String name;
     private String no;
@@ -33,7 +37,27 @@ public class StudentInfo {
         return gradeList;
     }
 
-    public void setGradeList(Map<String, Double> gradeList) {
-        this.gradeList = gradeList;
+    @Override
+    public String reportGrade() {
+
+        StringBuffer sb = new StringBuffer();
+        sb.append(this.getName());
+        sb.append(Constants.SPLIT_INLINE);
+
+        Constants.SUBJECT_ORDER_LIST
+                .forEach(subject -> {
+                    sb.append(NumberUtils.removeTrailZeros(gradeList.get(subject)));
+                    sb.append(Constants.SPLIT_INLINE);
+                });
+
+        sb.append(reportTotal());
+
+        return sb.toString();
+    }
+
+    @Override
+    public Double reportTotal() {
+        return this.gradeList.values().stream()
+                .reduce(0.0D, (acc, value) -> acc + value / gradeList.size());
     }
 }
