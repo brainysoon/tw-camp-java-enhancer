@@ -15,7 +15,7 @@ public class ReportServiceImpl implements ReportService {
     }
 
     @Override
-    public String generateReport() {
+    public String generateReport(String noList) {
         return null;
     }
 
