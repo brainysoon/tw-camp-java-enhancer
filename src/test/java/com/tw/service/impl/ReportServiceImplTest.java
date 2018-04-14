@@ -22,8 +22,8 @@ public class ReportServiceImplTest {
     public void generateReportTest() {
 
         String noList = "1, 2";
-        reportService.addStudent("张三, 1, 语文:95, 数学:75, 英语:80, 编程:80");
-        reportService.addStudent("李四, 2, 语文:80, 数学:85, 英语:70, 编程:90");
+        reportService.addStudent("张三, 1, 数学:75, 语文:95, 英语:80, 编程:80");
+        reportService.addStudent("李四, 2, 数学:85, 语文:80, 英语:70, 编程:90");
 
         String expectedResult = "成绩单\n" +
                 "姓名|数学|语文|英语|编程|平均分|总分\n" +

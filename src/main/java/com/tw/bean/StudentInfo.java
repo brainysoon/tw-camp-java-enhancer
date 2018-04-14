@@ -1,5 +1,6 @@
 package com.tw.bean;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class StudentInfo {
@@ -7,6 +8,10 @@ public class StudentInfo {
     private String name;
     private String no;
     private Map<String, Double> gradeList;
+
+    public StudentInfo() {
+        this.gradeList = new HashMap<>();
+    }
 
     public String getName() {
         return name;
