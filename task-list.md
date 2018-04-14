@@ -30,5 +30,7 @@ Action: We can merge interface to it's implement task.
 3. Task 2
 ```shell
 1. start time 9:15
-
+2. end time 11:05
 ```
+Check: Time spend a lot on little detail, and the implement is mass.
+Action: Don't stack at some implement just go though, and don't pick fragment time (it means don't be disturbed).
