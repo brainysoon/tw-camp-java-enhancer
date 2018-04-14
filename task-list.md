@@ -34,3 +34,11 @@ Action: We can merge interface to it's implement task.
 ```
 Check: Time spend a lot on little detail, and the implement is mass.
 Action: Don't stack at some implement just go though, and don't pick fragment time (it means don't be disturbed).
+
+4. Task 4
+```shell
+1. start time 11:18
+2. end time 11:41
+```
+Check: Almost done on time, but code need refactor, since its really bad.
+Action: none
