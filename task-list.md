@@ -1,10 +1,11 @@
 ## Task List
 
-* StudentInfo class (Basic student info store)
-* ClassInfo class (class student info store implement ReportGenerator, StudentManager)
-* ReportGenerator interface (generateReport method)
-* StudentManager interface (add method)
-* MenuController class (menu function)
+* StudentInfo class (Basic student info store, measure: 10)
+* ClassInfo class (class student info store implement ReportManager, measure: 20)
+* ReportManager interface (generateReport method, addStudent method, measure: 10)
+* MenuController class (menu function, measure:20)
+
+Total: 1 hour
 
 ## PDCA
 > please refer Plan -> Do -> Check -> Action to improve this task list.
