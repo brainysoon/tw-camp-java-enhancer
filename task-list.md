@@ -13,4 +13,7 @@ Total: 1 hour
 1. Task 1
 ```shell
 1. tart time 8:50
+2. end time 8:55
 ```
+Check: Time plan too much, since there is no need to test bean.
+Action: No need measure test time when measuring bean task.
