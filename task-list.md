@@ -17,3 +17,11 @@ Total: 1 hour
 ```
 Check: Time plan too much, since there is no need to test bean.
 Action: No need measure test time when measuring bean task.
+
+2. Task 3
+```shell
+1. start time 8:58
+2. end time 9:05
+```
+
+Check: Time
