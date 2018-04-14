@@ -33,6 +33,10 @@ public class StudentInfo implements GradeReporter {
         this.no = no;
     }
 
+    public void setGradeList(Map<String, Double> gradeList) {
+        this.gradeList = gradeList;
+    }
+
     public Map<String, Double> getGradeList() {
         return gradeList;
     }
