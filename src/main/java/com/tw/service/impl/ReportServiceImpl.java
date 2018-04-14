@@ -22,9 +22,12 @@ public class ReportServiceImpl implements ReportService {
                 "姓名|数学|语文|英语|编程|平均分|总分\n" +
                 "========================\n");
 
-        List<String> noExist = Arrays.stream(noList.split(","))
-                .filter(no -> studentList.containsKey(no.trim()))
-                .collect(Collectors.toList());
+        List<String> noExist = null;
+        try {
+            noExist = parserStudentNoFrom(noList);
+        } catch (Exception ex) {
+            return null;
+        }
 
         double[] classSumGrade = noExist.stream()
                 .mapToDouble((no) -> {
@@ -33,7 +36,9 @@ public class ReportServiceImpl implements ReportService {
                     sb.append("|");
 
                     gradeSubjectList.forEach(subject -> {
-                        sb.append(removeTrailZeros(stu.getGradeList().get(subject).toString()));
+                        Double grade = stu.getGradeList().get(subject);
+                        if (grade == null) return;
+                        sb.append(removeTrailZeros(grade.toString()));
                         sb.append("|");
                     });
 
@@ -73,14 +78,14 @@ public class ReportServiceImpl implements ReportService {
     }
 
     @Override
-    public boolean addStudent(String studentInfoStr) {
+    public StudentInfo addStudent(String studentInfoStr) {
         try {
 
             StudentInfo studentInfo = parserStudentInfoFrom(studentInfoStr);
             this.studentList.put(studentInfo.getNo(), studentInfo);
-            return true;
+            return studentInfo;
         } catch (Exception ex) {
-            return false;
+            return null;
         }
     }
 
@@ -109,5 +114,11 @@ public class ReportServiceImpl implements ReportService {
             return doubleValue.substring(0, lastZeros - 1);
         }
         return doubleValue;
+    }
+
+    private List<String> parserStudentNoFrom(String studentNoStr) throws Exception {
+        return Arrays.stream(studentNoStr.split(","))
+                .filter(no -> studentList.containsKey(no.trim()))
+                .collect(Collectors.toList());
     }
 }

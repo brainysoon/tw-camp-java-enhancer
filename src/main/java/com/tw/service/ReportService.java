@@ -1,8 +1,10 @@
 package com.tw.service;
 
+import com.tw.bean.StudentInfo;
+
 public interface ReportService {
 
     String generateReport(String noList);
 
-    boolean addStudent(String studentInfo);
+    StudentInfo addStudent(String studentInfo);
 }
