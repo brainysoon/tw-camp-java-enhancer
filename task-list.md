@@ -24,4 +24,6 @@ Action: No need measure test time when measuring bean task.
 2. end time 9:05
 ```
 
-Check: Time
+Check: Time plan too much, since there also is no need to test interface.
+Action: We can merge interface to it's implement task.
+
